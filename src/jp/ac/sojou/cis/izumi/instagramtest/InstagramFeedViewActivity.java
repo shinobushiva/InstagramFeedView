@@ -56,7 +56,7 @@ public class InstagramFeedViewActivity extends Activity {
 	/**
 	 * Instagramに登録したアプリのクライアントID
 	 */
-	private static final String CLIENT_ID = "af269417e5df45f5a6a9bb2ae50c89a5";
+	private static final String CLIENT_ID = "";
 
 	/**
 	 * 一度に取得するフィードの数
