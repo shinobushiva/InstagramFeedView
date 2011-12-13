@@ -1,0 +1,48 @@
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# Mac DS_Store
+.DS_Store
+
+# generated files
+gen/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# idea
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# secret
+secret.xml
+Keys.java
