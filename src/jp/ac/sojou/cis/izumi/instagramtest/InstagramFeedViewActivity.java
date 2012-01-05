@@ -56,7 +56,7 @@ public class InstagramFeedViewActivity extends Activity {
 	/**
 	 * Instagramに登録したアプリのクライアントID
 	 */
-	private static final String CLIENT_ID = "";
+	private static final String CLIENT_ID = "227b92a281464186be493c677d4f4f41";
 
 	/**
 	 * 一度に取得するフィードの数
@@ -131,10 +131,12 @@ public class InstagramFeedViewActivity extends Activity {
 		Log.d("TEST", state.name());
 
 		// 保存されているアクセストークンをチェック
-		if (token == null) {
-			state = State.GET_ACCESS_TOKEN;
-		} else {
-			state = State.HAS_ACCESS_TOKEN;
+		if (state != State.ACCESS_TOKEN_REQUESTED) {
+			if (token == null) {
+				state = State.GET_ACCESS_TOKEN;
+			} else {
+				state = State.HAS_ACCESS_TOKEN;
+			}
 		}
 
 		// アクセストークンの取得要求
@@ -147,7 +149,6 @@ public class InstagramFeedViewActivity extends Activity {
 			state = State.ACCESS_TOKEN_REQUESTED;
 			// ブラウザを起動
 			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
-			return;
 		}
 
 		// アクセストークンの取得要求に対する応答
